@@ -1,0 +1,325 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%; height: 100%;
+	list-style: none;
+	text-decoration: none;
+}
+
+ul li{list-style: none;}
+
+.wrapper{
+	height: auto;
+	min-height: 100%;
+	padding-top: 200px; padding-bottom: 70px;	
+	/*wrapper가 화면 전체를 차지하고 footer를 relative를 이용해서 그 위에 올려준다. -100%
+	https://www.youtube.com/watch?v=who42wBr1ns*/
+}
+
+
+
+@font-face{
+	font-family: "GothicA1-SemiBold";
+	src: url("./font/GothicA1-SemiBold.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "GothicA1-Bold";
+	src: url("./font/GothicA1-Bold.ttf") format("truetype");
+}
+
+#header{
+	width: 80%;
+	display: flex; margin: auto; margin-top: 45px;
+}
+
+header{
+	position: fixed;
+	top: 0; left: 0; width: 100%; height: 130px;
+	/*background: magenta;*/ background: #ffc5ed;
+	display: flex; 
+	justify-content: flex-end; 
+	margin: auto; 
+	/*border: 1px black solid;*/
+}
+
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+h1, h2, h4{
+	text-align: center;
+}
+
+h1{font-size: 45px;}
+h2{font-size: 30px;}
+h4{font-size: 20px;}
+
+hgroup p, p{margin-top: 30px; text-align: justify;}
+hgroup p{width: 80%; margin: auto;}
+hr{
+	width: 80%;
+	border: 1px solid;
+	border-radius: 50px;
+	border-color: rgba(95, 95, 95, 0.3);
+	margin-top: 20px; margin-bottom: 20px;
+}
+
+article{text-align: center; padding: 0 100px 100px 100px;}
+#odd{background: rgba(95, 95, 95, 0.2); border: 1px solid white;}
+
+#mylinker >ul{
+	display: flex;
+	justify-content: center;
+	width: 80%; margin: auto;
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
+#mylinker >ul >li{
+	font-family: GothicA1-Bold; 
+	font-size: 20px; 
+	color: white;
+	padding: 0 15px;
+	
+}
+
+#mylinker >ul >li a:hover{
+	text-decoration: 5px underline;
+	text-decoration-color: orange;
+}
+
+h2::before{
+	display: block;
+	content: '';
+	margin-top: -155px;
+	height: 155px;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+/*https://css-tricks.com/hash-tag-links-padding/*/
+
+
+
+#youtube{
+	margin-top: 80px;
+}
+
+#menubar{
+	display: flex;/*가로로 배치하기위함*/
+	justify-content: flex-end;
+	font-family: GothicA1-SemiBold; 
+	font-size: 20px; color: black;
+	width: 100%; height: 80px;	
+	margin: auto; 
+	text-align: center;
+	/*border: 1px red solid;*/
+}
+
+#menubar >ul >li{
+	float: left;
+	width: 150px;
+	position: relative;
+	padding: 15px;
+	line-height: 40px;
+	/*border: 1px black solid;*/
+}
+
+#menubar >ul >li >ul{
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+	padding: 0; margin-top: 6px; 
+	z-index: 1;
+	font-size: 15px;
+	/*border: 1px black solid;
+	background: green;*/
+}
+
+#menubar >ul >li:hover{
+	text-decoration: underline;
+}
+#menubar >ul >li:hover >ul{
+	background: #ffc5ed;
+	display: block;
+}
+
+#menubar >ul >li >ul >li{
+	padding: 0 15px;
+}
+#menubar >ul >li >ul >li:hover{
+	background: rgba(95, 95, 95, 0.5);
+	transition: ease 1s;
+}
+
+#bodyborder{
+	width: 80%;
+	border: 2px solid;
+	border-radius: 50px;
+	border-color: rgba(95, 95, 95, 0.3);
+	margin-top: 20px; margin-bottom: 20px;
+}
+
+section{
+	margin: auto;	
+	width: 80%;
+	border: 2px solid;
+	border-radius: 20px;
+	border-color: #ffc5ed;
+}
+
+.icons{
+	display: flex;
+	/*border: 2px solid;*/
+	padding-left: 0;
+	margin-bottom: 80px;
+}
+
+.icons >li{
+	/*border: 1px solid;*/
+	width: 100%;height: 250px;
+	background: #cacaca;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.icons >li:hover{
+	box-shadow: 10px 10px 5px darkgrey;
+}
+
+.icons >li> .icon_img, .icon_text{
+	margin-top: 30px;
+}
+
+
+.icons >li:not(:last-child){
+	margin-right: 20px;
+}
+
+
+
+table{border-top: 1px solid gray; margin: auto;}
+thead{background: rgba(95, 95, 95, 0.3); height: 60px;}
+th, td{border-bottom: 1px solid gray;}
+th{width: 150px;}
+td{
+	text-align: justify;
+	padding: 20px 0;
+	width: 80%;
+}
+
+#list{
+   margin-top: 80px;
+}
+
+details summary{
+   margin-top: 15px;
+}
+
+details summary:hover{
+   color: #af47ab;
+}
+
+.ment p{
+   text-align: center;
+   font-size: 20px;
+}
+
+.ment span{
+   color: yellowgreen;
+   font-size: 50px;
+}
+
+#ex_img{text-align: center;}
+#ex_img> img{
+   width: 70%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+#industry:hover{text-decoration: underline;}
+
+#chart{
+   width: 80%; margin: auto;
+   padding: 80px 50px;
+}
+
+
+#jobicon{
+	display: flex;
+	background: rgba(95, 95, 95, 0.3);
+	padding: 20px;
+	margin-bottom: 30px;
+	border-radius: 50px;
+}
+#jobicon h2{text-align: left;}
+#jobicon img{ 	
+	width: 200px; height: 200px;
+	margin: auto; margin-right: 20px;
+	
+
+}
+
+
+#textarea{
+	margin-top: 10px;
+	width: 600px;
+	height: 70px;
+	}
+
+input[type=text]:focus{font-size: 120%; background: aliceblue;}
+input[type=password]:focus{font-size: 120%; background: aliceblue;}
+
+.name{
+	border-radius:7px;
+	background-color: #F7D358;
+	border-radius:7px;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-left:3px;
+	font-weight: bold;
+	font-size: small;
+	}
+	
+.mention{
+	background-color: #F2F2F2;
+	padding-top:10px;
+	padding-right:20px;
+	padding-left:20px;
+	padding-bottom:10px;
+	}
+
+
+#up_btn{
+	position: fixed;
+	bottom: 150px; right: 5px;
+}
+#down_btn{
+	position: fixed;
+	bottom: 110px; right: 5px;
+}
+
+#up_btn:hover{
+	border-radius: 50%;
+	background-color: rgba(95, 95, 95, 0.5);
+}
+
+#down_btn:hover{
+	border-radius: 50%;
+	background-color: rgba(95, 95, 95, 0.5);
+}
+
+footer{
+	background: black;
+	color: white;
+	width: 100%; height: 90px;
+	position: relative;
+	transform: translateY(0%); 
+	left:  0; bottom: 0;
+	text-align: center; margin: auto;
+}

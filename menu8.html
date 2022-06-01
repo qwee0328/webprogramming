@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>seo0's BigData|Introduce</title>
+	<link rel="stylesheet" type="text/css" href="menu1.css">
+	<script type="text/javascript">
+		function focuson(obj1,obj2){
+			if(obj1.value==""){
+				obj1.focus();
+			}
+			if(obj1.value!=""&&obj2.value=="")
+				obj2.focus();		
+		}
+	
+	</script>
+</head>
+<body>
+
+<header>
+		<div id="header">
+		<div id="logo"><a href="./Main.html"><img src="./image/logo2.jpg" width="220"></a></div>
+		<div id="menubar">
+			<ul>
+				<li><a href="./menu1.html">빅데이터</a>
+					<ul>
+						<li><a href="./menu1.html">빅데이터란?</a></li>
+						<li><a href="./menu2.html">빅데이터 기술</a></li>
+						<li><a href="./menu3.html">AI와 빅데이터</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu4.html">빅데이터 활용</a>
+					<ul>
+						<li><a href="./menu4.html">활용 사례</a></li>
+						<li><a href="./menu5.html">활용 산업</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu6.html">관련직업</a>
+					<ul>
+						<li><a href="./menu6.html">빅데이터 전문가</a></li>
+						<li><a href="./menu7.html">빅데이터 관련직업</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu8.html">게시판</a></li>
+			</ul>
+		</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+		<section>
+			<h2>방명록</h2>
+			<hr>
+			<article>
+				<form name="fo" method="get">
+					<label>닉네임: <input id="nickname" type="text" size="15" value=""></label>
+					<label>비밀번호: <input id="pw" type="password" size="15" value=""></label><br>
+					<textarea id="textarea" cols="" rows="" wrap="SOFT" placeholder="내용을 입력하세요.">
+					</textarea>
+					<button id="btn" onmouseover="focuson(nickname,pw)">등록</button>
+				</form>
+			</article>
+			<h2>게시글</h2>
+			<hr>
+			<article class="comments">
+				<div class="name">닉네임: 서영</div>
+				<div class="mention">열심히 만들었네요~!</div>
+			</article>
+		</section>
+			
+		<div id="up_btn"><a href="#"><img src="./image/up-arrow.png"></a></div>
+				<div id="down_btn"><a href="#footer"><img src="./image/down-arrow.png"></a></div>
+	</div>
+
+	<footer id="footer">
+		<p>Copyright &copy; 2022.Kim seoyoung.All rights reserved.</p>
+	</footer>
+</body>
+</html>

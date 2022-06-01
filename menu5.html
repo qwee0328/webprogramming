@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>seo0's BigData|Field</title>
+	<link rel="stylesheet" type="text/css" href="menu1.css">
+	<script type="text/javascript">
+		function startScroll(interval){
+			setInterval("autoScroll()",interval);
+		}
+
+		function autoScroll(){
+			window.scrollBy(0,10);
+		}
+		
+		function query(){
+			ret=confirm("더보기 페이지로 이동하시겠습니까?");
+			return ret;
+		}
+	</script>
+</head>
+<body onload="startScroll(1000)">
+<header>
+		<div id="header">
+			<div id="logo"><a href="./Main.html"><img src="./image/logo2.jpg" width="220"></a></div>
+		<div id="menubar">
+			<ul>
+				<li><a href="./menu1.html">빅데이터</a>
+					<ul>
+						<li><a href="./menu1.html">빅데이터란?</a></li>
+						<li><a href="./menu2.html">빅데이터 기술</a></li>
+						<li><a href="./menu3.html">AI와 빅데이터</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu4.html">빅데이터 활용</a>
+					<ul>
+						<li><a href="./menu4.html">활용 사례</a></li>
+						<li><a href="./menu5.html">활용 산업</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu6.html">관련직업</a>
+					<ul>
+						<li><a href="./menu6.html">빅데이터 전문가</a></li>
+						<li><a href="./menu7.html">빅데이터 관련직업</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu8.html">게시판</a></li>
+			</ul>
+		</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+		<section>
+			<h1>활용 산업</h1>
+			<hr>
+			<article>
+				<p>IT 시장분석 및 컨설팅 기관인 IDC Korea(International Data Corporation Korea Ltd.)는 최근 발간한 '전 세계 빅데이터 및 분석(BDA) 지출 가이드'에서 아시아 태평양 지역의 2022년 빅데이터 및 분석 (BDA) 솔루션 지출이 전년대비 19% 성장할 것이라고 전망했다.</p>
+
+				
+				<!--<canvas id="mycanvas" style="background: rgba(255, 197, 237, 0.5);"></canvas>-->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+				<div id="chart"><canvas id="pie-chart"></canvas></div>
+				
+
+				<script>
+					new Chart(document.getElementById("pie-chart"), {
+				    type: 'pie',
+				    data: {
+				      labels: ["금융", "통신", "연방/중앙 정부", "전문 서비스", "이산형 제조","기타"],
+				      datasets: [{
+				        label: "Population (millions)",
+				        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#949fb0","#fcb362","#f5444e"],
+				        data: [15.3,12.6,9.3,8.9,9.3,45.4]
+				      }]
+				    },
+				    options: {
+ 				     title: {
+				        display: true,
+				        text: '2022년 아시아 태평양 지역 주요 산업별 BDA 지출',
+				        fontSize:30
+				      }
+				    }
+				});
+
+
+				</script>
+
+				<p>산업별로 살펴보면, 금융산업이 향후 5년간 빅데이터 분석 솔루션에 가장 많은 투자를 지속할 것으로 나타났으며, 사기 행위 탐지 및 고객 경험 개선에 초점을 맞추어 고객 충성도를 높이기 위한 의도로 해석된다. 통신산업은 전체 지출의 두번째로 지출이 많은 산업으로 조사됐으며, 네트워크 운영의 효율성과 효과 및 처리량을 개선하고 다운타임을 감소시키기 위한 인사이트를 도출하기 위해 인프라 및 네트워크에 대한 투자를 적극적으로 하는것으로 나타났다.</p>
+
+				<p>더보기 : <a href="https://www.idc.com/getdoc.jsp?containerId=prAP49131122" onclick="return query()" id="industry" target="_blank">한국IDC, 2022년 아태지역* 빅데이터 및 분석(BDA) 지출 19% 성장 전망</a></p>
+			</article>
+		</section>
+		<div id="up_btn"><a href="#"><img src="./image/up-arrow.png"></a></div>
+		<div id="down_btn"><a href="#footer"><img src="./image/down-arrow.png"></a></div>
+	</div>
+
+	<footer id="footer">
+		<p>Copyright &copy; 2022.Kim seoyoung.All rights reserved.</p>
+	</footer>
+</body>
+</html>

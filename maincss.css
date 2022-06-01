@@ -1,0 +1,351 @@
+html,body{/*chapter3 셀렉터: 태그이름*/
+	margin: 0;
+	padding: 0;
+	width: 100%; height: 100%;
+	/*chapter4 리스트 꾸미기*/
+	list-style: none;
+	/*chapter3 셀렉터: 텍스트 꾸미기*/
+	text-decoration: none;
+}
+
+.wrapper{/*chapter3 셀렉터: 클래스 샐렉터*/
+	height: auto;
+	min-height: 100%;
+	padding-bottom: 70px;
+	/*wrapper가 화면 전체를 차지하고 footer를 relative를 이용해서 그 위에 올려준다.
+	footer가 차지하는 화면에 내용이 가려지지 않도록 padding-bottom값을 설정하여 준다.*/
+}
+
+@font-face{/*다운 받은 폰트를 사용하기위해 설정해줌*/
+	font-family: "GothicA1-SemiBold";
+	src: url("./font/GothicA1-SemiBold.ttf") format("truetype");
+}
+
+#header{/*chapter3 셀렉터: 아이디 샐렉터*/
+/*화면 크기를 조정해도 window화면의 가로 80%만 크기를 차지하도록 설정하고 안에 내용이 가로로 배치되도록 display값을 flex로 설정*/
+	width: 80%;
+	display: flex; /*chapter4 박스 유형제어-가로배치*/
+	margin: auto; margin-top: 45px;
+}
+
+header{/*chapter3 셀렉터: 태그이름*/
+/*chapter3 시멘틱 태그 속성값
+header가 차지하는 부분은 window화면 크기를 조절해도 가로 100%를 차지하도록 하고 내부에 들어있는 내용이
+가로로 정렬되도록 하였다.*/
+	top: 0; left: 0; width: 100%; height: 130px;
+	display: flex; /*chapter4 박스 유형제어-가로배치*/
+	justify-content: flex-end; 
+	margin: auto; 
+}
+
+/*ul li{list-style: none;}/*chapter3 셀렉터: 태그이름*/
+a{/*chapter3 셀렉터: 태그이름, 색과 텍스트 꾸미기*/
+	text-decoration: none;
+	color: #333;
+}
+
+section{/*chapter3 셀렉터: 태그이름*/
+	display: flex; /*chapter4 박스 유형제어-가로배치*/
+	margin: auto;	
+	width: 100%; padding: 0;	
+}
+
+section ul, li{/*chapter3 셀렉터: 태그이름, 셀렉터 조합*//*chapter4 리스트 꾸미기*/
+	list-style: none;
+}
+
+footer{/*chapter3 셀렉터: 태그이름*/
+	background: black;
+	color: white;/*chapter3 셀렉터: 색과 텍스트 꾸미기*/
+	position: relative;/*chapter4 박스 배치*/
+	transform: translateY(-100%);
+	width: 100%; height: 90px; 
+	left:  0; bottom: 0;
+	text-align: center;
+}
+
+/*메뉴바 생성관련 셀렉터
+메뉴바의 메인 리스트가 가로로 나타나고 각 메인 리스트에 마우스를 올리면
+드롭다운 메뉴바로 생성*/
+/*chapter4 리스트 꾸미기-메뉴바 만들기*/
+#menubar{/*chapter3 셀렉터: 아이디 샐렉터*/
+	display: flex;/*chapter4 박스 유형제어-가로배치*/
+	justify-content: flex-end;
+	/*chapter3 셀렉터: 색과 텍스트 꾸미기*/
+	font-family: GothicA1-SemiBold; 
+	font-size: 20px; color: black;
+	width: 100%; height: 80px;	
+	margin: auto; 
+	text-align: center;
+	z-index: 1;/*chapter4 박스 배치-맨 위로*/
+}
+
+#menubar >ul >li{/*chapter3 셀렉터: 아이디 샐렉터, 셀렉터 조합*/
+	float: left;
+	width: 150px;
+	position: relative;/*chapter4 박스 배치*/
+	padding: 15px;
+	line-height: 40px;
+}
+
+#menubar >ul >li >ul{/*chapter3 셀렉터: 아이디 샐렉터, 셀렉터 조합*/
+	display: none;/*chapter4 박스 유형제어-안보이게*/
+	position: absolute;/*chapter4 박스 배치*/
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+	padding: 0; margin-top: 6px; 
+	z-index: 1;/*chapter4 박스 배치-맨 위로*/
+	font-size: 15px;
+}
+
+#menubar >ul >li:hover{/*chapter3 셀렉터: 아이디 샐렉터, 셀렉터 조합*/
+	text-decoration: underline;
+}
+#menubar >ul >li:hover >ul{/*chapter3 셀렉터: 아이디 샐렉터, 셀렉터 조합*/
+	background: rgba(255, 197, 237, 1.0);/*#ffc5ed;*/
+	display: block;/*chapter4 박스 유형제어-보이게*/
+}
+
+#menubar >ul >li >ul >li{/*chapter3 셀렉터: 아이디 샐렉터, 셀렉터 조합*/
+	padding: 0 15px;
+}
+#menubar >ul >li >ul >li:hover{/*chapter3 셀렉터: 아이디 샐렉터, 셀렉터 조합*/
+	background: rgba(95, 95, 95, 0.5);
+	transition: ease 1s;
+}
+
+/*메인화면의 사진 슬라이드 관련한 라디오 버튼 안보이게 설정*/
+[name="slide"]{display: none;}/*chapter3 셀렉터: 속성 셀렉터*//*chapter4 박스 유형제어-가로배치*/
+
+/*메인화면 사진 슬라이드 부분 설정*/
+/*chapter3 셀렉터: 클래스 샐렉터*//*chapter4 리스트 꾸미기-사진 슬라이드만들기*/
+.slidebox{width: 100%; margin: 0 auto;background: black;}
+.slidebox img{max-width: 100%;}
+.slidebox .slidelist{
+	white-space: nowrap;
+	font-size: 0;
+	overflow: hidden;/*chapter4 박스 배치-넘어서는 부분은 보이지 않게*/
+	padding-left: 0;
+}
+.slidebox .slideitem{
+	position: relative;/*chapter4 박스 배치*/
+	display: inline-block;/*chapter4 박스 유형제어*/
+	vertical-align: middle;
+	width: 100%;
+	transition: all .35s;
+}
+.slidebox .slideitem label{
+	position: absolute;/*chapter4 박스 배치*/
+	z-index: 1;/*chapter4 박스 배치-맨 위로*/
+	top: 50%;
+	/*transform: translateY(-50%);*/
+	padding: 20px;
+	/*chapter3 셀렉터: 박스모델 꾸미기*/
+	border-radius: 50%;
+	/*chapter3 셀렉터: 시각적 효과*/
+	cursor: pointer;
+}
+label.left{
+	left: 20px;
+	background-image: url(./image/left_arrow.png);
+	background-position: center center;
+	background-size: 50%;
+	background-repeat: no-repeat;
+}
+label.right{
+	right: 20px;
+	background-image: url(./image/right_arrow.png);
+	background-position: center center;
+	background-size: 50%;
+	background-repeat: no-repeat;
+}
+
+label.left:hover{
+	background-size: 80%;
+}
+label.right:hover{
+	background-size: 80%;
+}
+
+/*keyframes속성으로 애니메이션 효과 적용하여 
+사진이 시간이 지나면 자동으로 슬라이드가 넘어가도록 설정*/
+@keyframes slide01{
+	0%{left: 0%;}
+	23%{left: 0%;}
+	25%{left: -100%;}
+	48%{left: -100%;}
+	50%{left: -200%;}
+	73%{left: -200%;}
+	75%{left: -300%;}
+	98%{left: -300%;}
+	100%{left: 0%;}
+}
+
+@keyframes slide02{
+	0%{left: 0%;}
+	23%{left: 0%;}
+	25%{left: -100%;}
+	48%{left: -100%;}
+	50%{left: -200%;}
+	73%{left: -200%;}
+	75%{left: 100%;}
+	98%{left: 100%;}
+	100%{left: 0%;}
+}
+@keyframes slide03{
+	0%{left: 0%;}
+	23%{left: 0%;}
+	25%{left: -100%;}
+	48%{left: -100%;}
+	50%{left: 200%;}
+	73%{left: 200%;}
+	75%{left: 100%;}
+	98%{left: 100%;}
+	100%{left: 0%;}
+}
+@keyframes slide04{
+	0%{left: 0%;}
+	23%{left: 0%;}
+	25%{left: 300%;}
+	48%{left: 300%;}
+	50%{left: 200%;}
+	73%{left: 200%;}
+	75%{left: 100%;}
+	98%{left: 100%;}
+	100%{left: 0%;}
+}
+[id="slide01"]:checked ~ .slidelist .slideitem{transform: translateX(0); animation: slide01 20s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem{transform: translateX(-100%); animation: slide02 20s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem{transform: translateX(-200%); animation: slide03 20s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem{transform: translateX(-300%); animation: slide04 20s infinite;}
+
+
+/*메인화면 슬라이드 이미지에 마우스를 가져다 대면 배경색이 어두워지면서 글자가 애니메이션으로 위아래에서 올라오게끔 설정*/
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.slidelist .slideitem a .screen img{
+	background: rgba(255, 255, 255, .5);
+	opacity: 1.0;
+	transition: all .35s;
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.slidelist .slideitem a:hover .screen img{
+	opacity: 0.5;
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.slidelist .slideitem a .screen .top{
+	position: absolute;/*chapter4 박스 배치*/
+	bottom: 150%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;/*chapter4 박스 배치-맨 위로*/
+	/*chapter3 셀렉터: 태그이름, 색과 텍스트 꾸미기*/
+	color: #fff;
+	font-size: 26px;
+	/*font-weight: 900;*/
+	transition: all .35s;
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.slidelist .slideitem a .screen .bottom{
+	position: absolute;/*chapter4 박스 배치*/
+	top: 150%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;/*chapter4 박스 배치-맨 위로*/
+	/*chapter3 셀렉터: 태그이름, 색과 텍스트 꾸미기*/
+	color: #fff;
+	font-size: 12px;
+	transition: all .35s;
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.slidelist .slideitem a:hover .top{bottom: 52%;}
+.slidelist .slideitem a:hover .bottom{top: 52%;}
+
+
+/*chapter4 리스트 꾸미기-홈페이지 리스트*/
+/*사이트 예시 리스트 설정*/
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.Introsite{
+	margin-top: 100px; margin-bottom: 50px;
+	width: 80%;
+	/*background: yellow;*/
+	flex-direction: column;
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.Introsite div{margin-bottom: 30px; font-size: 40px;}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.icons{
+	display: flex;/*chapter4 박스 유형제어-가로배치*/
+	padding-left: 0;
+	margin-bottom: 80px;
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.icons >li{
+	width: 100%;height: 250px;
+	background: #cacaca;
+	/*chapter3 셀렉터: 박스모델 꾸미기*/
+	border:1px solid grey;
+	border-radius: 20px;
+	overflow: hidden;/*chapter4 박스 배치-넘어서는 부분은 보이지 않게*/
+
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.icon_img img{width: 100%; height: 250px;}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.icons >li:hover{
+	/*chapter3 셀렉터: 시각적 효과*/
+	box-shadow: 10px 10px 5px darkgrey;
+}
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.icons >li> .icon_img, .icon_text{
+	/*margin-top: 30px;*/
+}
+
+/*chapter3 셀렉터: 클래스 샐렉터*/
+.icons >li:not(:last-child){
+	margin-right: 20px;
+}
+
+/*메인화면 글자인트로 설정*/
+/*chapter3 셀렉터: 클래스 샐렉터*/
+/*chapter4 리스트 꾸미기-텍스트 리스트*/
+.mainIntro{
+	margin-top: 100px; margin-bottom: 50px;
+	width: 80%;
+}
+.mainIntro div{margin-bottom: 30px; font-size: 40px;}
+.mainIntro ul{padding-left: 0;}
+.mainIntro li{
+	margin-bottom: 20px;
+}
+/*chapter3 셀렉터: 태그이름, 색과 텍스트 꾸미기*/
+.mainIntro li a{
+	color: rgba(95, 95, 95, 0.7);
+}
+/*chapter3 셀렉터: 태그이름, 색과 텍스트 꾸미기*/
+.mainIntro li a:hover{color: black;}
+.mainIntro li a:hover span{text-decoration: underline; text-decoration-color: orange; transition: all .35s;}
+
+/*페이지 위아래 이동버튼 설정*/
+/*chapter3 셀렉터: 아이디 샐렉터*/
+#up_btn{
+	position: fixed;/*chapter4 박스 배치*/
+	bottom: 150px; right: 5px;
+}
+#down_btn{
+	position: fixed;/*chapter4 박스 배치*/
+	bottom: 110px; right: 5px;
+}
+/*chapter3 셀렉터: 태그이름, 색과 텍스트 꾸미기*/
+#up_btn:hover{
+	/*chapter3 셀렉터: 박스모델 꾸미기*/
+	border-radius: 50%;
+	background-color: rgba(95, 95, 95, 0.5);
+}
+
+#down_btn:hover{
+	/*chapter3 셀렉터: 박스모델 꾸미기*/
+	border-radius: 50%;
+	background-color: rgba(95, 95, 95, 0.5);
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>seo0's BigData|JOB1</title>
+	<link rel="stylesheet" type="text/css" href="menu1.css">
+	<script type="text/javascript">
+		function startScroll(interval){
+			setInterval("autoScroll()",interval);
+		}
+
+		function autoScroll(){
+			window.scrollBy(0,10);
+		}
+		function load(){
+			let win=window.open();
+			let select=document.getElementById("site");
+			win.location=select.options[select.selectedIndex].value;
+		}
+	</script>
+</head>
+<body onload="startScroll(1000)">
+<header>
+		<div id="header">
+		<div id="logo"><a href="./Main.html"><img src="./image/logo2.jpg" width="220"></a></div>
+		<div id="menubar">
+			<ul>
+				<li><a href="./menu1.html">빅데이터</a>
+					<ul>
+						<li><a href="./menu1.html">빅데이터란?</a></li>
+						<li><a href="./menu2.html">빅데이터 기술</a></li>
+						<li><a href="./menu3.html">AI와 빅데이터</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu4.html">빅데이터 활용</a>
+					<ul>
+						<li><a href="./menu4.html">활용 사례</a></li>
+						<li><a href="./menu5.html">활용 산업</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu6.html">관련직업</a>
+					<ul>
+						<li><a href="./menu6.html">빅데이터 전문가</a></li>
+						<li><a href="./menu7.html">빅데이터 관련직업</a></li>
+					</ul>
+				</li>
+				<li><a href="./menu8.html">게시판</a></li>
+			</ul>
+		</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+		<section>
+			<h1>빅데이터 전문가</h1>
+			<div id="mylinker">
+				<script>
+				linklist=["#하는 일","#분야","#준비과정","#관련 사이트"];
+				linkanker=["#what","#field","#preparation","#relatedSites"];
+				document.write("<ul>");
+				for(i=0;i<linklist.length;i++){
+					document.write("<li><a href="+linkanker[i]+"><li>"+linklist[i]);
+				}				
+				document.write("</ul>");
+			</script>
+				<!--<ul>
+					<li><a href="#what">#하는 일</a></li>
+					<li><a href="#field">#분야</a></li>
+					<li><a href="#preparation">#준비과정</a></li>
+					<li><a href="#relatedSites">#관련 사이트</a></li>
+				</ul>-->
+			</div>
+			<hr>
+			<article id="odd">
+				<h2 id="what">어떤 일을 하나요?</h2>
+				<p>빅데이터 전문가는 대량의 빅데이터로 사람들의 행동이나 시장의 변화 등을 분석하는데 도움이 되는 정보를 제공하는 일을 한다. 구체적으로는 데이터 수집, 데이터 저장 및 분석, 데이터 시각화 등을 통한 정보 제공을 담당한다.</p>
+			</article>
+
+			<article>
+				<h2 id="field">어느분야에서 활동 하나요?</h2>
+				<p>빅데이터 전문가는 금융, 유통, 제조, 서비스, 의료, 공공 분야 등 다양한 영역에서 활동이 가능합니다. </p>
+				<table style="margin-top: 80px;">
+					<tr>
+						<th>금융분야</th>
+						<td>신용 리스크 관리, 로보어드바이저 등</td>
+					</tr>
+					<tr>
+						<th>유통분야 </th>
+						<td>계절에 따라 생산이나 판매가 달라지는 상품 예측, 백화점 및 매장의 상품 진열 등</td>
+					</tr>
+					<tr>
+						<th>제조분야</th>
+						<td>불량 제품이 발생할 가능성 미리 예측 등</td>
+					</tr>
+				</table>
+			</article>
+
+			<article id="odd">
+				<h2 id="preparation">어떻게 준비하나요?</h2>
+				<div id="list">
+				<details>
+					<summary>관련 전공</summary>
+					<p>빅데이터 전문가가 되기 위해서는 빅데이터를 활용하기 위한 매우 높은 수준의 지식과 기술이 필요하다. 이를 위해 대학에서 통계학 또는 컴퓨터공학, 산업공학 등을 전공하면 기술적인 기초를 갖추는데 도움이 된다. 또한 경영학이나 홍보 및 판매 분야의 지식과 경험을 쌓아두면 기술적인 기초와 결합해 더 유리할 수 있다.</p>
+				</details>
+				<details>
+					<summary>훈련 과정</summary>
+					<p>각 대학의 빅데이터 관련 학사나 석박사 과정에서 준비할 수 있으며 한국데이터베이스진흥원에도 단기 교육 과정이 준비되어있다. 빅데이터 활용센터, 빅데이터 아카데미 등에서도 빅데이터 전문가를 교육하는 중이다.</p>
+				</details>
+				<details>
+					<summary>관련 자격</summary>
+					<p>빅데이터 전문가가 되기 위해서는 한국데이터진흥원(Kdata)에서 주관하는 '데이터아키텍처 전문가, 준전문가' 자격증이 있으며 통계청에서 주관하고있는 '사회조사 분석사' 자격증 및 정보처리기사 자격증이 있다.</p>
+				</details>
+			</div>
+			</article>
+
+			<article>
+				<h2 id="relatedSites">관련 단체 및 기관 사이트</h2>
+				<label>사이트 선택 : <select id="site">
+					<option value="http://www.kbigdata.kr/main.html">(사)한국빅데이터학회</option>
+					<option value="https://www.kdata.or.kr/" selected>한국 데이터산업 진흥원</option>
+					<option value="https://bigdata.seoul.go.kr/main.do">서울특별시 빅데이터 캠퍼스</option>
+					<option value="http://www.kfva.org/">미래 직업협회</option>
+					<option value="https://www.career.go.kr/cnet/front/base/guidebook/guideBookDetail.do?GUIDEBOOK_SEQ=10578">커리어넷 빅데이터 전문가</option>
+					<option value="https://www.career.go.kr/cnet/front/examen/examenMain.do">커리어넷 진로 심리검사</option>
+				</select></label>
+				<button onclick="load()">웹사이트 접속</button>
+			</article>
+			<div id="up_btn"><a href="#"><img src="./image/up-arrow.png"></a></div>
+				<div id="down_btn"><a href="#footer"><img src="./image/down-arrow.png"></a></div>
+		</section>
+	</div>
+
+
+	<footer id="footer">
+		<p>Copyright &copy; 2022.Kim seoyoung.All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
